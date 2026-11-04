@@ -1,12 +1,16 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregador RSS</title>
+
+    <title>NewsFeed - Agregador de Notícias</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -15,25 +19,64 @@
     </header>
 
     <main>
-        <h2>Últimas notícias</h2>
 
-        <input type="text" id="pesquisa" placeholder="Pesquisar notícias...">
+        <section class="introducao">
+            <h2>Últimas notícias</h2>
+            <p>Acompanhe as principais novidades do mundo.</p>
+        </section>
 
-        <div class="categorias">
-            <button onclick="filtrar('Todas')">Todas</button>
-            <button onclick="filtrar('Tecnologia')">Tecnologia</button>
-            <button onclick="filtrar('Games')">Games</button>
-            <button onclick="filtrar('Ciência')">Ciência</button>
-        </div>
+        <section class="pesquisa">
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar notícias..."
+            >
+        </section>
 
-        <div id="noticias"></div>
+        <section class="categorias">
+
+            <button onclick="filtrar('Todas')">
+                Todas
+            </button>
+
+            <button onclick="filtrar('Tecnologia')">
+                Tecnologia
+            </button>
+
+            <button onclick="filtrar('Games')">
+                Games
+            </button>
+
+            <button onclick="filtrar('Ciência')">
+                Ciência
+            </button>
+
+            <button onclick="filtrar('Favoritos')">
+                Favoritos
+            </button>
+
+        </section>
+
+        <section class="controles">
+            <button id="atualizar" onclick="carregarNoticias()">
+                Atualizar notícias
+            </button>
+        </section>
+
+        <section id="noticias">
+            <p>Carregando notícias...</p>
+        </section>
+
     </main>
 
     <footer>
-        <p>Projeto Agregador RSS - ADS</p>
+        <h3>NewsFeed</h3>
+        <p>Projeto desenvolvido para o curso de ADS.</p>
+        <p>2026 - Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
