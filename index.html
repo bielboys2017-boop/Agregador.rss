@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregador RSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>NewsFeed</h1>
+        <p>Suas notícias em um só lugar</p>
+    </header>
+
+    <main>
+        <h2>Últimas notícias</h2>
+
+        <input type="text" id="pesquisa" placeholder="Pesquisar notícias...">
+
+        <div class="categorias">
+            <button onclick="filtrar('Todas')">Todas</button>
+            <button onclick="filtrar('Tecnologia')">Tecnologia</button>
+            <button onclick="filtrar('Games')">Games</button>
+            <button onclick="filtrar('Ciência')">Ciência</button>
+        </div>
+
+        <div id="noticias"></div>
+    </main>
+
+    <footer>
+        <p>Projeto Agregador RSS - ADS</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
